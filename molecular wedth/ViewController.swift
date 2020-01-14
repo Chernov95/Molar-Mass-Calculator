@@ -19,7 +19,12 @@ class ViewController: UIViewController {
 //  giveMassOfMolecule(molecule: "H(CH3)2(CH)3")
         
 //        giveMassOfMolecule(molecule: "CH(CH)2(CH)")
-        giveMassOfMolecule(molecule: "(CH)2HO3(CHO)")
+//        giveMassOfMolecule(molecule: "(CH)2HO3(CHO)")
+    
+        
+        
+        
+        giveMassOfMolecule(molecule: "(CH)(CMnHO)")
     }
 
 
@@ -272,7 +277,7 @@ func giveMassOfMolecule (molecule : String) {
   
       var mendeleevChart = [
   
-          "H" : 1 , "O" : 16 , "Fe" : 17 , "Se" : 15 , "N" : 14 , "C" : 12
+        "H" : 1 , "O" : 16 , "Fe" : 17 , "Se" : 15 , "N" : 14 , "C" : 12 , "Mn" : 55
   
       ]
   
