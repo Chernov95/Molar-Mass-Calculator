@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-  giveMassOfMolecule(molecule: "C(H2)C(H2)CH4(O2)2")
+  giveMassOfMolecule(molecule: "CH4C(H)2CH3C(H)")
     }
     
     func giveMassOfMolecule (molecule : String) {
@@ -48,7 +48,13 @@ class ViewController: UIViewController {
 
 
                 if character.isUppercase || character.isLowercase {
+                    
+                    if  weAreLookingForMultiplyerAfterParentacies == true {
+                        generalMultiplayersOfParantacies.append((String(1) ,String(numberOfParentacies) ))
+                    }
                     weAreLookingForMultiplyerAfterParentacies = false
+                    
+                
 
 
 
@@ -344,8 +350,7 @@ class ViewController: UIViewController {
                             
                        and index to remove is \(indexToRemove)
                 """)
-                
-          
+  
                 if stringsInParenatacies.count > 0 {
                     if stringsInParenatacies.count == indexesThatMustBeRemoved.count {
                         stringsInParenatacies.removeAll()
