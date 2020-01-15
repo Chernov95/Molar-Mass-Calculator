@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var chemicalFormula: UITextField!
     @IBOutlet weak var resultOfCalculation: UILabel!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +38,8 @@ class ViewController: UIViewController {
         
         giveMassOfMolecule(molecule: "C2H4H2O(OH32)")
         resultOfCalculation.text = ""
+        
+        
         
         
         
@@ -165,7 +169,20 @@ class ViewController: UIViewController {
           //                       stringsInParenatacies.append(String(character))
                               stringsInParenatacies.append((String(character) , String(numberOfParentacies)))
                                  numberOfChemicalElementsInMoleculeInParentiacies = numberOfChemicalElementsInMoleculeInParentiacies + 1
-                                                   
+                                                   var letters : [String?] = []
+                                                                                          if numberOfIterations < molecule.count || numberOfIterations == molecule.count {
+                                                                                              for charakterito in molecule {
+                                                                                                  letters.append(String(charakterito))
+                                                                                              }
+
+                                                                                              var smth = letters[numberOfIterations]
+                                                                                              if Int(smth!) == nil {
+
+                                                                                                  let atomThatNeedToMultiply = numberOfChemicalElementsInMoleculeInParentiacies
+                                                                                                  numbersAndThersIndexexInParentaciew.append((1 , atomThatNeedToMultiply))
+                                                                                              }
+
+                                                                                          }
                                                  
                              }else if character.isLowercase {
       
@@ -175,20 +192,20 @@ class ViewController: UIViewController {
       
                              }
                             
-                                        var letters : [String?] = []
-                                        if numberOfIterations < molecule.count || numberOfIterations == molecule.count {
-                                            for charakterito in molecule {
-                                                letters.append(String(charakterito))
-                                            }
-
-                                            var smth = letters[numberOfIterations]
-                                            if Int(smth!) == nil {
-
-                                                let atomThatNeedToMultiply = numberOfChemicalElementsInMoleculeInParentiacies
-                                                numbersAndThersIndexexInParentaciew.append((1 , atomThatNeedToMultiply))
-                                            }
-
-                                        }
+//                                        var letters : [String?] = []
+//                                        if numberOfIterations < molecule.count || numberOfIterations == molecule.count {
+//                                            for charakterito in molecule {
+//                                                letters.append(String(charakterito))
+//                                            }
+//
+//                                            var smth = letters[numberOfIterations]
+//                                            if Int(smth!) == nil {
+//
+//                                                let atomThatNeedToMultiply = numberOfChemicalElementsInMoleculeInParentiacies
+//                                                numbersAndThersIndexexInParentaciew.append((1 , atomThatNeedToMultiply))
+//                                            }
+//
+//                                        }
                             
                             
                       
