@@ -505,6 +505,8 @@ class ViewController: UIViewController {
         
         print("MASS OF MOLECULE IF EQUAL \(massMolecule)")
         
+        print("Number and their indexes are \(numbersAndTheirsIndexes)")
+        
         return massMolecule
       
       }
