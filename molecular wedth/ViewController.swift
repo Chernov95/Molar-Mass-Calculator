@@ -9,7 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
 
+    
+    @IBOutlet weak var chemicalFormula: UITextField!
+    @IBOutlet weak var resultOfCalculation: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,12 +35,30 @@ class ViewController: UIViewController {
         
         
         giveMassOfMolecule(molecule: "C2H4H2O(OH32)")
+        resultOfCalculation.text = ""
+        
+        
+        
+        
+        
+    }
+    @IBAction func calculateMolecularMass(_ sender: Any) {
+        
+        if chemicalFormula.text?.count != 0 {
+            let mass = giveMassOfMolecule(molecule: (chemicalFormula.text!))
+             
+                resultOfCalculation.text = "\(String(mass!)) g / mol "
+            
+        }else{
+            //To show the alert that user havent provided any text
+        }
+        
         
     }
     
     
     
-    func giveMassOfMolecule (molecule : String) {
+    func giveMassOfMolecule (molecule : String) ->Int? {
       
           let hydrogen = ("H" , 1)
           let oxygen = ("O" , 16)
@@ -297,7 +321,7 @@ class ViewController: UIViewController {
       
           var mendeleevChart = [
       
-            "H" : 1 , "O" : 16 , "Fe" : 17 , "Se" : 15 , "N" : 14 , "C" : 12 , "Mn" : 55
+            "H" : 1 , "O" : 16 , "Fe" : 56 , "Se" : 15 , "N" : 14 , "C" : 12 , "Mn" : 55
       
           ]
       
@@ -479,6 +503,8 @@ class ViewController: UIViewController {
         print("giveMeMassOfEvethingThatIsNotInParentacies(elementsNotInParentecies: strings) \(giveMeMassOfEvethingThatIsNotInParentacies(elementsNotInParentecies: strings))")
         
         print("MASS OF MOLECULE IF EQUAL \(massMolecule)")
+        
+        return massMolecule
       
       }
 
