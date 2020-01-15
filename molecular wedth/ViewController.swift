@@ -22,8 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
 
-        
-        
+        //Fe(Se2Mn)2
     
         resultOfCalculation.text = ""
         
@@ -157,12 +156,25 @@ class ViewController: UIViewController {
                                                                                               for charakterito in molecule {
                                                                                                   letters.append(String(charakterito))
                                                                                               }
+                                                                                            
+                                                                                            print("I am here current charakter is \(character)")
 
-                                                                                              var smth = letters[numberOfIterations]
-                                                                                              if Int(smth!) == nil {
+                                                                                              var nextLetter = letters[numberOfIterations]
+                                                                                            if Int(nextLetter!) == nil  {
+                                                                                                
+                                                                                                if Character(nextLetter!).isLowercase != true  {
+                                                                                                    let atomThatNeedToMultiply = numberOfChemicalElementsInMoleculeInParentiacies
+                                                                                                    numbersAndThersIndexexInParentaciew.append((1 , atomThatNeedToMultiply))
+                                                                                                    print(numbersAndThersIndexexInParentaciew.count)
+                                                                                               print("Current charakter is \(character) next is \(nextLetter)")
+                                                                                                    
+                                                                                                
+                                                                                            }
 
-                                                                                                  let atomThatNeedToMultiply = numberOfChemicalElementsInMoleculeInParentiacies
-                                                                                                  numbersAndThersIndexexInParentaciew.append((1 , atomThatNeedToMultiply))
+                                                                                                
+                                                                                                
+                                                                                                
+                                                                                                  
                                                                                               }
 
                                                                                           }
@@ -170,10 +182,36 @@ class ViewController: UIViewController {
                              }else if character.isLowercase {
       
                               stringsInParenatacies[stringsInParenatacies.count - 1].0 = stringsInParenatacies[stringsInParenatacies.count - 1].0 + String(character)
-                                
+                                var letters : [String?] = []
+                                if numberOfIterations < molecule.count || numberOfIterations == molecule.count {
+                                    for charakterito in molecule {
+                                        letters.append(String(charakterito))
+                                    }
+                                  
+                                  print("I am here current charakter is \(character)")
+
+                                    var nextLetter = letters[numberOfIterations]
+                                  if Int(nextLetter!) == nil  {
+                                      
+                                      if Character(nextLetter!).isUppercase == true  {
+                                          let atomThatNeedToMultiply = numberOfChemicalElementsInMoleculeInParentiacies
+                                          numbersAndThersIndexexInParentaciew.append((1 , atomThatNeedToMultiply))
+                                          print(numbersAndThersIndexexInParentaciew.count)
+                                     print("Current charakter is \(character) next is \(nextLetter) I am adding number 1")
+                                      
+                                      
+                                  }
+                                    
+                                    if Character(nextLetter!) == ")" {
+                                        let atomThatNeedToMultiply = numberOfChemicalElementsInMoleculeInParentiacies
+                                        numbersAndThersIndexexInParentaciew.append((1 , atomThatNeedToMultiply))
+                                        print(numbersAndThersIndexexInParentaciew.count)
+                                    }
                                 
       
                              }
+                                }
+                            }
 
                             
                       
@@ -208,17 +246,17 @@ class ViewController: UIViewController {
                 
                 
                 
-                
+
                 var letters : [String?] = []
                 if numberOfIterations < molecule.count || numberOfIterations == molecule.count {
                     for charakterito in molecule {
                         letters.append(String(charakterito))
                     }
-                    
-                    
-            
-                    
-                   
+
+
+
+
+
                     if numberOfIterations != letters.count  {
                         print("I am here number of iteration is \(numberOfIterations) and letters are there \(letters.count)")
                         if let nextLetter = letters[numberOfIterations] {
@@ -229,11 +267,11 @@ class ViewController: UIViewController {
                     }else if numberOfIterations == letters.count {
                         generalMultiplayersOfParantacies.append((String(1) ,String(numberOfParentacies) ))
                     }
-                    
-                    
-                  
-                
-                
+
+
+
+
+
                 }
                 
                 
@@ -302,7 +340,7 @@ class ViewController: UIViewController {
       
           var mendeleevChart = [
       
-            "H" : 1 , "O" : 16 , "Fe" : 56 , "Se" : 15 , "N" : 14 , "C" : 12 , "Mn" : 55
+            "H" : 1 , "O" : 16 , "Fe" : 56 , "Se" : 79 , "N" : 14 , "C" : 12 , "Mn" : 55
       
           ]
       
@@ -471,5 +509,6 @@ class ViewController: UIViewController {
       
       }
 
-    
+        
+
 }
