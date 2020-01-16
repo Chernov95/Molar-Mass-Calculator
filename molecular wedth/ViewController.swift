@@ -131,7 +131,13 @@ class ViewController: UIViewController {
                           }else{
                               let indexIs = Int(String(character))
                                       let atomThatNeedToMultiply = numberOfChemicalElementInMolecule
-                                      numbersAndTheirsIndexes.append((indexIs! , atomThatNeedToMultiply))
+//                                      numbersAndTheirsIndexes.append((indexIs! , atomThatNeedToMultiply))
+                            if numbersAndTheirsIndexes.last?.1 == atomThatNeedToMultiply {
+                                var needToInterpolare = String(numbersAndTheirsIndexes[numbersAndTheirsIndexes.count - 1].0) + String(indexIs!)
+                                numbersAndTheirsIndexes[numbersAndTheirsIndexes.count - 1].0 = Int(needToInterpolare)!
+                            }else{
+                                numbersAndTheirsIndexes.append((indexIs! , atomThatNeedToMultiply))
+                            }
                    
                           }
       
