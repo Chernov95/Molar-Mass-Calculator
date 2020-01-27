@@ -3,22 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C920ED1523D7ADFA005E99CF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C920ED1423D7ADFA005E99CF /* TableViewCell.swift */; };
+		C970986D23DA167900792AF4 /* Tahoma Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C970986B23DA167800792AF4 /* Tahoma Bold.ttf */; };
+		C970986E23DA167900792AF4 /* Tahoma.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C970986C23DA167900792AF4 /* Tahoma.ttf */; };
+		C970987123DA2DB500792AF4 /* LucidaGrande.ttc in Resources */ = {isa = PBXBuildFile; fileRef = C970987023DA2DB400792AF4 /* LucidaGrande.ttc */; };
 		C9F77AD123CE02E60056288C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F77AD023CE02E60056288C /* AppDelegate.swift */; };
-		C9F77AD323CE02E60056288C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F77AD223CE02E60056288C /* SceneDelegate.swift */; };
 		C9F77AD523CE02E60056288C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F77AD423CE02E60056288C /* ViewController.swift */; };
 		C9F77AD823CE02E60056288C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F77AD623CE02E60056288C /* Main.storyboard */; };
 		C9F77ADA23CE02E70056288C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9F77AD923CE02E70056288C /* Assets.xcassets */; };
 		C9F77ADD23CE02E70056288C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F77ADB23CE02E70056288C /* LaunchScreen.storyboard */; };
+		EECDA574F29931A20D100769 /* Pods_molecular_wedth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984B0FC23A123E1B665A23B1 /* Pods_molecular_wedth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EE66219FF170633F2A9F42A /* Pods-molecular wedth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-molecular wedth.debug.xcconfig"; path = "Target Support Files/Pods-molecular wedth/Pods-molecular wedth.debug.xcconfig"; sourceTree = "<group>"; };
+		7A6694678BBD66C40878B729 /* Pods-molecular wedth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-molecular wedth.release.xcconfig"; path = "Target Support Files/Pods-molecular wedth/Pods-molecular wedth.release.xcconfig"; sourceTree = "<group>"; };
+		984B0FC23A123E1B665A23B1 /* Pods_molecular_wedth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_molecular_wedth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C920ED1423D7ADFA005E99CF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C970986B23DA167800792AF4 /* Tahoma Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tahoma Bold.ttf"; sourceTree = "<group>"; };
+		C970986C23DA167900792AF4 /* Tahoma.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tahoma.ttf; sourceTree = "<group>"; };
+		C970987023DA2DB400792AF4 /* LucidaGrande.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = LucidaGrande.ttc; sourceTree = "<group>"; };
 		C9F77ACD23CE02E60056288C /* molecular wedth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "molecular wedth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F77AD023CE02E60056288C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C9F77AD223CE02E60056288C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C9F77AD423CE02E60056288C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C9F77AD723CE02E60056288C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9F77AD923CE02E70056288C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,17 +41,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EECDA574F29931A20D100769 /* Pods_molecular_wedth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07AFF02C053E96EEFAC99538 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EE66219FF170633F2A9F42A /* Pods-molecular wedth.debug.xcconfig */,
+				7A6694678BBD66C40878B729 /* Pods-molecular wedth.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8CD2A54F1496358C63B4708F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				984B0FC23A123E1B665A23B1 /* Pods_molecular_wedth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C970986423DA101400792AF4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C970986C23DA167900792AF4 /* Tahoma.ttf */,
+				C970986B23DA167800792AF4 /* Tahoma Bold.ttf */,
+				C970987023DA2DB400792AF4 /* LucidaGrande.ttc */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		C9F77AC423CE02E60056288C = {
 			isa = PBXGroup;
 			children = (
 				C9F77ACF23CE02E60056288C /* molecular wedth */,
 				C9F77ACE23CE02E60056288C /* Products */,
+				07AFF02C053E96EEFAC99538 /* Pods */,
+				8CD2A54F1496358C63B4708F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,12 +97,13 @@
 			isa = PBXGroup;
 			children = (
 				C9F77AD023CE02E60056288C /* AppDelegate.swift */,
-				C9F77AD223CE02E60056288C /* SceneDelegate.swift */,
 				C9F77AD423CE02E60056288C /* ViewController.swift */,
+				C920ED1423D7ADFA005E99CF /* TableViewCell.swift */,
 				C9F77AD623CE02E60056288C /* Main.storyboard */,
 				C9F77AD923CE02E70056288C /* Assets.xcassets */,
 				C9F77ADB23CE02E70056288C /* LaunchScreen.storyboard */,
 				C9F77ADE23CE02E70056288C /* Info.plist */,
+				C970986423DA101400792AF4 /* Fonts */,
 			);
 			path = "molecular wedth";
 			sourceTree = "<group>";
@@ -74,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9F77AE123CE02E70056288C /* Build configuration list for PBXNativeTarget "molecular wedth" */;
 			buildPhases = (
+				B0DED578F04FA15C2F4492B1 /* [CP] Check Pods Manifest.lock */,
 				C9F77AC923CE02E60056288C /* Sources */,
 				C9F77ACA23CE02E60056288C /* Frameworks */,
 				C9F77ACB23CE02E60056288C /* Resources */,
+				3C3F6710F430BCC4FC5D35B2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,20 +170,65 @@
 			files = (
 				C9F77ADD23CE02E70056288C /* LaunchScreen.storyboard in Resources */,
 				C9F77ADA23CE02E70056288C /* Assets.xcassets in Resources */,
+				C970987123DA2DB500792AF4 /* LucidaGrande.ttc in Resources */,
+				C970986D23DA167900792AF4 /* Tahoma Bold.ttf in Resources */,
+				C970986E23DA167900792AF4 /* Tahoma.ttf in Resources */,
 				C9F77AD823CE02E60056288C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C3F6710F430BCC4FC5D35B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-molecular wedth/Pods-molecular wedth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-molecular wedth/Pods-molecular wedth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-molecular wedth/Pods-molecular wedth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0DED578F04FA15C2F4492B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-molecular wedth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C9F77AC923CE02E60056288C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C920ED1523D7ADFA005E99CF /* TableViewCell.swift in Sources */,
 				C9F77AD523CE02E60056288C /* ViewController.swift in Sources */,
 				C9F77AD123CE02E60056288C /* AppDelegate.swift in Sources */,
-				C9F77AD323CE02E60056288C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,6 +370,7 @@
 		};
 		C9F77AE223CE02E70056288C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EE66219FF170633F2A9F42A /* Pods-molecular wedth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +389,7 @@
 		};
 		C9F77AE323CE02E70056288C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A6694678BBD66C40878B729 /* Pods-molecular wedth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
