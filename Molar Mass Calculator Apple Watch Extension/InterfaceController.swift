@@ -35,6 +35,12 @@ class InterfaceController: WKInterfaceController {
             //Если пользователь ничего не ввел , но до этого была формула который масса которой больше нуля, по прежнем на "текстфилде" изобразить старую формулу
                     
             
+            
+            
+            
+            
+            
+            //Need to optimise here
             let inputFromUser = arr?.first as? String ?? ""
             
             if inputFromUser != "" {
