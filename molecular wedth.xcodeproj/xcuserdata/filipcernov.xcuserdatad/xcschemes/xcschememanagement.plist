@@ -4,14 +4,39 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Molar Mass Calculator Apple Watch (Glance).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Molar Mass Calculator Apple Watch (Notification).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Molar Mass Calculator Apple Watch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Molar Mass Calculator Apple Watch.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>molecular wedth.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>C996748E23E251F300A31232</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C9F77ACC23CE02E60056288C</key>
 		<dict>
 			<key>primary</key>

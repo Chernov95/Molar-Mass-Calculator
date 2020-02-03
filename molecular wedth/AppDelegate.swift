@@ -17,14 +17,7 @@ var window: UIWindow?
         // Override point for customization after application launch.
         
 
-        
-//            let fontFamilyNames = UIFont.familyNames
-//            for familyName in fontFamilyNames {
-//                print("------------------------------")
-//                print("Font Family Name = [\(familyName)]")
-//                let names = UIFont.fontNames(forFamilyName: familyName )
-//                print("Font Names = [\(names)]")
-//            }
+
         
         return true
     }

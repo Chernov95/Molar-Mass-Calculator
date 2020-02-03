@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Molar_Mass_Calculator_Apple_Watch" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="66" alignment="left" backgroundImage="top view apple watch" id="CRB-s0-FjU">
+                            <items>
+                                <button width="1" alignment="left" title="Enter formula" id="uDk-Mw-h1G">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="19"/>
+                                    <connections>
+                                        <action selector="provideFormula" destination="AgC-eL-Hgc" id="3sc-Yw-8NB"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label width="136" height="50" alignment="center" verticalAlignment="center" textAlignment="center" id="9uM-Yl-2BG">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="14"/>
+                        </label>
+                        <button width="128" height="50" alignment="center" verticalAlignment="bottom" backgroundImage="buttonCalculate Jpg 2" id="aDp-yz-Qo7">
+                            <connections>
+                                <action selector="calculate" destination="AgC-eL-Hgc" id="a8I-9t-bb9"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="massOfMolecule" destination="9uM-Yl-2BG" id="3Dz-cH-ndp"/>
+                        <outlet property="providedFormula" destination="uDk-Mw-h1G" id="WZ9-de-jb9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="24.391304347826086" y="28.839285714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="buttonCalculate Jpg 2" width="147" height="51"/>
+        <image name="top view apple watch" width="184" height="85"/>
+    </resources>
+</document>
