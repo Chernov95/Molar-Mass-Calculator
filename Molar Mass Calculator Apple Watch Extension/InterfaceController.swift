@@ -58,13 +58,7 @@ class InterfaceController: WKInterfaceController {
                 }
             }
                          
-//                         self.valueThatUserProvided =  arr?.first as? String ?? ""
-//
-//            if self.valueThatUserProvided == "" {
-//                self.providedFormula.setTitle("Enter formula")
-//            }else{
-//                self.providedFormula.setTitle(self.valueThatUserProvided)
-//            }
+
             
             
         }
