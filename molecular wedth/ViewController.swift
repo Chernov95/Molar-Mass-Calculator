@@ -55,6 +55,14 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
        
         topView!.dropShadow(color: .black, opacity: 1, offSet:  CGSize(width: 1,height: 3), radius: 4, scale: true)
         bottomView!.dropShadow(color: .black, opacity: 1, offSet:  CGSize(width: 1,height: 3), radius: 4, scale: true)
+        
+        chemicalFormula.attributedPlaceholder = NSAttributedString(string: "Chemical Formula",
+                                                                           attributes: [NSAttributedString.Key.foregroundColor: UIColor.officialApplePlaceholderGray])
+                
+                // It makes clear button in TextField visible when user is using dark mode
+                if #available(iOS 13.0, *) {
+                        overrideUserInterfaceStyle = .light
+                    }
   
        
  
@@ -944,3 +952,10 @@ extension String {
 
 
 
+extension UIColor {
+    
+    static var officialApplePlaceholderGray: UIColor {
+        return UIColor(red: 0, green: 0, blue: 0.0980392, alpha: 0.22)
+    }
+    
+}
