@@ -13,13 +13,16 @@ import ChameleonFramework
 
 class ViewController: UIViewController , UITableViewDataSource , UITableViewDelegate {
     
+    let reviewService = ReviewService.shared
+    
     var dictionaryToShowPercantageOfEveryAtom : [String : (massOfChemicelElement : Double ,numberOfAtoms : Int)] = [:]
        
     
     var keysForDictionaryAbove : [String] = [] 
     var massOfWholeMoleculeToCalculatePersentage = 0.0
     var bigMultiplyer = 1.0
-    
+    let appLaunches = UserDefaults.standard.integer(forKey: "appLaunches")
+    var numberOfCalculationsPerOneLounch = 0
     
 
     
@@ -59,10 +62,10 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         chemicalFormula.attributedPlaceholder = NSAttributedString(string: "Chemical Formula",
                                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor.officialApplePlaceholderGray])
                 
-                // It makes clear button in TextField visible when user is using dark mode
-                if #available(iOS 13.0, *) {
-                        overrideUserInterfaceStyle = .light
-                    }
+        // It makes clear button in TextField visible when user is using a dark mode
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        }
   
        
  
@@ -86,6 +89,11 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
             massOfWholeMoleculeToCalculatePersentage = mass ?? 0
              
             resultOfCalculation.text = "\(String(mass!.rounded(toPlaces: 2))) g / mol "
+            
+            
+            smartAskingUserToReviewApp(mass : mass)
+            
+            
             for (key , _) in dictionaryToShowPercantageOfEveryAtom.sorted(by: {$0.value.massOfChemicelElement > $1.value.massOfChemicelElement}) {
                 keysForDictionaryAbove.append(key)
             }
@@ -98,6 +106,23 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         print("after pressing button array with keys is \(keysForDictionaryAbove) , dictionary is  \(dictionaryToShowPercantageOfEveryAtom)")
         
         
+    }
+    func smartAskingUserToReviewApp(mass : Double?) {
+        if mass!.rounded(toPlaces: 2) > 0 {
+            numberOfCalculationsPerOneLounch += 1
+            if appLaunches >= 1 {
+                getReviewFromTheUser(interval: 2)
+            } else if numberOfCalculationsPerOneLounch >= 3 {
+                getReviewFromTheUser(interval: 1)
+            }
+        }
+    }
+    
+    func getReviewFromTheUser(interval : Int) {
+        let deadline = DispatchTime.now() + .seconds(interval)
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+            [weak self] in self?.reviewService.requestReview()
+        }
     }
     
     

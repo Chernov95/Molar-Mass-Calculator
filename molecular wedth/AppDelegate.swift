@@ -15,11 +15,16 @@ var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        countUserLaunches()
 
 
-        
         return true
+    }
+    
+    func countUserLaunches() {
+        var appLaunches = UserDefaults.standard.integer(forKey: "appLaunches")
+        appLaunches += 1
+        UserDefaults.standard.set(appLaunches, forKey: "appLaunches")
     }
 
     // MARK: UISceneSession Lifecycle

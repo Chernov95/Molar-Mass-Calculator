@@ -11,6 +11,7 @@
 		C970986D23DA167900792AF4 /* Tahoma Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C970986B23DA167800792AF4 /* Tahoma Bold.ttf */; };
 		C970986E23DA167900792AF4 /* Tahoma.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C970986C23DA167900792AF4 /* Tahoma.ttf */; };
 		C970987123DA2DB500792AF4 /* LucidaGrande.ttc in Resources */ = {isa = PBXBuildFile; fileRef = C970987023DA2DB400792AF4 /* LucidaGrande.ttc */; };
+		C98C15292586A6A500432516 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C15282586A6A500432516 /* ReviewService.swift */; };
 		C996749323E251F300A31232 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C996749123E251F300A31232 /* Interface.storyboard */; };
 		C996749523E251F400A31232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C996749423E251F400A31232 /* Assets.xcassets */; };
 		C996749C23E251F400A31232 /* Molar Mass Calculator Apple Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C996749B23E251F400A31232 /* Molar Mass Calculator Apple Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -76,6 +77,7 @@
 		C970986B23DA167800792AF4 /* Tahoma Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tahoma Bold.ttf"; sourceTree = "<group>"; };
 		C970986C23DA167900792AF4 /* Tahoma.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tahoma.ttf; sourceTree = "<group>"; };
 		C970987023DA2DB400792AF4 /* LucidaGrande.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = LucidaGrande.ttc; sourceTree = "<group>"; };
+		C98C15282586A6A500432516 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
 		C996748F23E251F300A31232 /* Molar Mass Calculator Apple Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Molar Mass Calculator Apple Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C996749223E251F300A31232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		C996749423E251F400A31232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				C9F77AD023CE02E60056288C /* AppDelegate.swift */,
 				C9F77AD423CE02E60056288C /* ViewController.swift */,
+				C98C15282586A6A500432516 /* ReviewService.swift */,
 				C920ED1423D7ADFA005E99CF /* TableViewCell.swift */,
 				C9F77AD623CE02E60056288C /* Main.storyboard */,
 				C9F77AD923CE02E70056288C /* Assets.xcassets */,
@@ -395,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C920ED1523D7ADFA005E99CF /* TableViewCell.swift in Sources */,
+				C98C15292586A6A500432516 /* ReviewService.swift in Sources */,
 				C9F77AD523CE02E60056288C /* ViewController.swift in Sources */,
 				C9F77AD123CE02E60056288C /* AppDelegate.swift in Sources */,
 			);
