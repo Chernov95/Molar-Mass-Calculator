@@ -660,6 +660,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.filipcernov.molar-mass-calculator";
 				PRODUCT_NAME = "Molar Mass Calculator";
 				SWIFT_VERSION = 5.0;
@@ -680,6 +681,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.filipcernov.molar-mass-calculator";
 				PRODUCT_NAME = "Molar Mass Calculator";
 				SWIFT_VERSION = 5.0;
