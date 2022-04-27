@@ -88,7 +88,7 @@ struct TextFieldResultAndButtonCalculate : View {
                                  }else{
                                      chemicalFormulaIsNotIdentified = false
                                      
-                                     //Get Feedeback from user
+                                     //Get a feedback from user
                                      let deadline = DispatchTime.now() + .seconds(2)
                                      DispatchQueue.main.asyncAfter(deadline: deadline) {
                                          reviewService.requestReview()
