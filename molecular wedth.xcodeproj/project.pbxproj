@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C920ED1523D7ADFA005E99CF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C920ED1423D7ADFA005E99CF /* TableViewCell.swift */; };
+		C93171D5280816AA005E0C16 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93171D4280816AA005E0C16 /* MainView.swift */; };
+		C93171D728081AC7005E0C16 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93171D628081AC7005E0C16 /* TextViews.swift */; };
+		C93171D928082C40005E0C16 /* TextFieldResultAndButtonCalculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93171D828082C40005E0C16 /* TextFieldResultAndButtonCalculate.swift */; };
+		C958B13F2808610D00946B34 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C958B13E2808610D00946B34 /* Calculation.swift */; };
 		C970986D23DA167900792AF4 /* Tahoma Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C970986B23DA167800792AF4 /* Tahoma Bold.ttf */; };
 		C970986E23DA167900792AF4 /* Tahoma.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C970986C23DA167900792AF4 /* Tahoma.ttf */; };
 		C970987123DA2DB500792AF4 /* LucidaGrande.ttc in Resources */ = {isa = PBXBuildFile; fileRef = C970987023DA2DB400792AF4 /* LucidaGrande.ttc */; };
+		C98C15292586A6A500432516 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C15282586A6A500432516 /* ReviewService.swift */; };
 		C996749323E251F300A31232 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C996749123E251F300A31232 /* Interface.storyboard */; };
 		C996749523E251F400A31232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C996749423E251F400A31232 /* Assets.xcassets */; };
 		C996749C23E251F400A31232 /* Molar Mass Calculator Apple Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C996749B23E251F400A31232 /* Molar Mass Calculator Apple Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -73,9 +78,14 @@
 		7A6694678BBD66C40878B729 /* Pods-molecular wedth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-molecular wedth.release.xcconfig"; path = "Target Support Files/Pods-molecular wedth/Pods-molecular wedth.release.xcconfig"; sourceTree = "<group>"; };
 		984B0FC23A123E1B665A23B1 /* Pods_molecular_wedth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_molecular_wedth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C920ED1423D7ADFA005E99CF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C93171D4280816AA005E0C16 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C93171D628081AC7005E0C16 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		C93171D828082C40005E0C16 /* TextFieldResultAndButtonCalculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldResultAndButtonCalculate.swift; sourceTree = "<group>"; };
+		C958B13E2808610D00946B34 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 		C970986B23DA167800792AF4 /* Tahoma Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tahoma Bold.ttf"; sourceTree = "<group>"; };
 		C970986C23DA167900792AF4 /* Tahoma.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tahoma.ttf; sourceTree = "<group>"; };
 		C970987023DA2DB400792AF4 /* LucidaGrande.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = LucidaGrande.ttc; sourceTree = "<group>"; };
+		C98C15282586A6A500432516 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
 		C996748F23E251F300A31232 /* Molar Mass Calculator Apple Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Molar Mass Calculator Apple Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C996749223E251F300A31232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		C996749423E251F400A31232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +147,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C93171D328081693005E0C16 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				C93171D4280816AA005E0C16 /* MainView.swift */,
+				C93171D828082C40005E0C16 /* TextFieldResultAndButtonCalculate.swift */,
+				C93171D628081AC7005E0C16 /* TextViews.swift */,
+				C958B13D280860FD00946B34 /* Model */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		C958B13D280860FD00946B34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C98C15282586A6A500432516 /* ReviewService.swift */,
+				C958B13E2808610D00946B34 /* Calculation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C970986423DA101400792AF4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +201,7 @@
 		C9F77AC423CE02E60056288C = {
 			isa = PBXGroup;
 			children = (
+				C93171D328081693005E0C16 /* SwiftUI */,
 				C9F77ACF23CE02E60056288C /* molecular wedth */,
 				C996749023E251F300A31232 /* Molar Mass Calculator Apple Watch */,
 				C996749F23E251F400A31232 /* Molar Mass Calculator Apple Watch Extension */,
@@ -394,9 +425,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93171D928082C40005E0C16 /* TextFieldResultAndButtonCalculate.swift in Sources */,
 				C920ED1523D7ADFA005E99CF /* TableViewCell.swift in Sources */,
+				C98C15292586A6A500432516 /* ReviewService.swift in Sources */,
+				C958B13F2808610D00946B34 /* Calculation.swift in Sources */,
 				C9F77AD523CE02E60056288C /* ViewController.swift in Sources */,
+				C93171D5280816AA005E0C16 /* MainView.swift in Sources */,
 				C9F77AD123CE02E60056288C /* AppDelegate.swift in Sources */,
+				C93171D728081AC7005E0C16 /* TextViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,10 +688,12 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3QCJKKKPU8;
 				INFOPLIST_FILE = "molecular wedth/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.filipcernov.molar-mass-calculator";
 				PRODUCT_NAME = "Molar Mass Calculator";
 				SWIFT_VERSION = 5.0;
@@ -672,10 +710,12 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3QCJKKKPU8;
 				INFOPLIST_FILE = "molecular wedth/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.filipcernov.molar-mass-calculator";
 				PRODUCT_NAME = "Molar Mass Calculator";
 				SWIFT_VERSION = 5.0;
