@@ -18,6 +18,7 @@ struct TextFieldResultAndButtonCalculate : View {
         @State var keysForDictionaryAbove : [String] = []
         @State var chemicalFormulaIsNotIdentified = false
         let reviewService = ReviewService.shared
+        let chemicalSubstances = ["H2O", "H2SO4", "Al(OH)3", "CH4", "KMnO4", "Fe(OH)3"]
 
          var body: some View {
              VStack {
@@ -27,14 +28,22 @@ struct TextFieldResultAndButtonCalculate : View {
                              .textFieldStyle(MyTextFieldStyle())
                              .accentColor(.black)
                                          .toolbar(content: {
+                                            
                                              ToolbarItemGroup(placement: .keyboard) {
-                                                 Button {
-                                                     print("Button is clicked")
-                                                 } label: {
-//                                                     Text("H2SO4")
-                                                 }
+                                                 
+                                                     ForEach(chemicalSubstances, id: \.self) { chemicalSubstance in
+                                                         Spacer()
+                                                         Button {
+                                                             print("Button is clicked")
+                                                         } label: {
+                                                             Text("\(chemicalSubstance)")
+                                                         }
+                                                         Spacer()
+                                                     }
+                                                 
+                                                 
+                                            }
 
-                                             }
                                          })
                                          .multilineTextAlignment(.center)
                                          .showClearButton($textFieldText)
