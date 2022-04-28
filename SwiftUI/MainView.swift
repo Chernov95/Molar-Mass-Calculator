@@ -18,6 +18,10 @@ struct MainView: View {
             Spacer()
             BottomView(calculation: $calculation)
         }
+        .ignoresSafeArea(.keyboard)
+        .onTapGesture {
+            hideKeyboard()
+        }
     }
 }
 
@@ -91,10 +95,8 @@ struct DataLabels : View {
        
                 }
             }
-            
-
-            
     }
+      
 
     }
 }
@@ -138,3 +140,12 @@ struct MainView_Previews: PreviewProvider {
             .previewDevice("iPhone 11")
     }
 }
+
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
+

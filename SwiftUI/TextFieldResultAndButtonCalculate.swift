@@ -27,8 +27,27 @@ struct TextFieldResultAndButtonCalculate : View {
                                          .font(Font.custom("Hoefler Text", size: 25))
                                          .padding()
                                          .textFieldStyle(.roundedBorder)
+                                         .toolbar(content: {
+                                             ToolbarItemGroup(placement: .keyboard) {
+                                                 Button {
+                                                     print("Button is clicked")
+                                                 } label: {
+//                                                     Text("H2SO4")
+//                                                     Text("H2SO4")
+//                                                     Text("H2SO4")
+//                                                     Text("H2SO4")
+//                                                     Text("H2SO4")
+                                                 }
+
+                                             }
+                                         })
                                          .multilineTextAlignment(.center)
                                          .showClearButton($textFieldText)
+                         
+                         //It hides default suggestion for the keyboard
+                                         .keyboardType(.alphabet)
+                                         .disableAutocorrection(true)
+                         
                                         
                                          .onChange(of: textFieldText) { textFieldText in
                                             
@@ -100,7 +119,7 @@ struct TextFieldResultAndButtonCalculate : View {
                          }
                      
                      print("Hello, after pressing button array with keys is \(calculation.keysForDictionaryAbove) , dictionary is  \(calculation.dictionaryToShowPercantageOfEveryAtom)")
-                     
+                     hideKeyboard()
                  } label: {
                      Image("buttonCalculate")
                  }
@@ -117,21 +136,25 @@ struct TextFieldClearButton: ViewModifier {
     @Binding var fieldText: String
 
     func body(content: Content) -> some View {
-        content
-            .overlay {
-            if !fieldText.isEmpty {
-                HStack {
-                    Spacer()
-                    Button {
-                        fieldText = ""
-                    } label: {
-                        Image(systemName: "multiply.circle.fill")
+        
+            content
+                .overlay {
+                if !fieldText.isEmpty {
+                    HStack {
+                        Spacer()
+                        Button {
+                            fieldText = ""
+                            print("Clear button is pressed")
+                        } label: {
+                            Image(systemName: "multiply.circle.fill")
+                        }
+                        .foregroundColor(.secondary)
+                        .padding(.trailing, 18)
                     }
-                    .foregroundColor(.secondary)
-                    .padding(.trailing, 30)
                 }
             }
-        }
+        
+       
     }
 }
 
