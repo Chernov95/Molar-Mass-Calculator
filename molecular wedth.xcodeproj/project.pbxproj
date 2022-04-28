@@ -153,6 +153,7 @@
 				C93171D4280816AA005E0C16 /* MainView.swift */,
 				C93171D828082C40005E0C16 /* TextFieldResultAndButtonCalculate.swift */,
 				C93171D628081AC7005E0C16 /* TextViews.swift */,
+				C9F77AD923CE02E70056288C /* Assets.xcassets */,
 				C958B13D280860FD00946B34 /* Model */,
 			);
 			path = SwiftUI;
@@ -228,7 +229,6 @@
 				C9F77AD423CE02E60056288C /* ViewController.swift */,
 				C920ED1423D7ADFA005E99CF /* TableViewCell.swift */,
 				C9F77AD623CE02E60056288C /* Main.storyboard */,
-				C9F77AD923CE02E70056288C /* Assets.xcassets */,
 				C9F77ADB23CE02E70056288C /* LaunchScreen.storyboard */,
 				C9F77ADE23CE02E70056288C /* Info.plist */,
 				C970986423DA101400792AF4 /* Fonts */,

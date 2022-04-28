@@ -20,6 +20,7 @@ struct TextViews: View {
                 DetailsLabel(labelName: "Element")
                 DataLabel(text: "15.99")
                 ErrorView()
+                
             }
         }
     }
@@ -33,7 +34,8 @@ struct MassTextView : View {
         Text("\(massAndUnits)")
             .foregroundColor(Color("MassTextViewColor"))
             .font((Font.custom("Tahoma-Bold", size: 32, relativeTo: .largeTitle)))
-            .padding(.bottom, 50)
+            
+        
     }
 }
 
@@ -47,7 +49,6 @@ struct ErrorView : View {
             .font(Font.custom("LucidaGrande", size: 15, relativeTo: .subheadline))
             .multilineTextAlignment(.center)
             .frame(width: 300, height: 70, alignment: .center)
-
     }
     
 }
@@ -58,6 +59,7 @@ struct DetailsTextView : View {
             .foregroundColor(Color("DetailsLabelTextViewColor"))
             .bold()
             .font(Font.custom("Futura Bold", size: 18.7, relativeTo: .headline))
+           
     }
 }
 
@@ -75,7 +77,8 @@ struct DataLabel : View {
             .multilineTextAlignment(.center)
             .lineLimit(1)
             .frame(width: 50, height: 20, alignment: .center)
-            
+           
+      
     }
         
 }
@@ -92,6 +95,21 @@ struct DetailsLabel : View {
             .foregroundColor(Color("DetailsLabelTextViewColor"))
             .font(Font.custom("Verdana", size: 11, relativeTo: .caption2))
             .multilineTextAlignment(.center)
+            
+    }
+}
+
+struct MyTextFieldStyle: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        configuration
+        .font(Font.custom("Hoefler Text", size: 25))
+        .padding(10)
+       
+        .background(
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .stroke(Color.white, lineWidth: 3)
+        ).padding()
+            
     }
 }
 

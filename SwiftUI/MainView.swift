@@ -8,20 +8,37 @@
 
 import SwiftUI
 
+
 struct MainView: View {
     
     @State private var calculation = Calculation()
   
     var body: some View {
-        VStack {
-            TextFieldResultAndButtonCalculate(calculation: $calculation)
-            Spacer()
-            BottomView(calculation: $calculation)
+        
+
+
+
+        GeometryReader { _ in
+            ZStack {
+                VStack {
+
+                    TextFieldResultAndButtonCalculate(calculation: $calculation)
+                    Spacer()
+                    BottomView(calculation: $calculation)
+
+                }
+
+                //When dark mode is on it keeps the background color white
+                .background(Color("BackgroundColor"))
+
+                .onTapGesture {
+                    hideKeyboard()
+                }
+            }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+
         }
-        .ignoresSafeArea(.keyboard)
-        .onTapGesture {
-            hideKeyboard()
-        }
+            
+       
     }
 }
 
@@ -43,7 +60,9 @@ struct BottomView : View {
         .padding()
         .clipped()
         .shadow(radius: 4, x: 1, y: 3)
+    
     }
+       
   }
 }
 
@@ -55,6 +74,7 @@ struct Labels : View {
         }
         .padding(.leading, 12)
         .padding(.top)
+       
         HStack  {
             DetailsLabel(labelName: "Element")
             Spacer()
@@ -67,6 +87,7 @@ struct Labels : View {
         .padding(.leading)
         .padding(.trailing)
         .padding(.top, 1)
+       
     }
 }
 
@@ -95,7 +116,9 @@ struct DataLabels : View {
        
                 }
             }
+          
     }
+        
       
 
     }
@@ -124,7 +147,9 @@ struct DetailedData : View {
                     .padding(.leading)
                     .padding(.trailing)
                     .padding(.bottom, 5)
+                   
             }
+            
     }
 }
 
@@ -137,15 +162,41 @@ struct MainView_Previews: PreviewProvider {
    
     static var previews: some View {
         MainView()
+            .preferredColorScheme(.dark)
             .previewDevice("iPhone 11")
     }
 }
 
+struct KeyboardResponsiveModifier: ViewModifier {
+  @State private var offset: CGFloat = 0
+
+  func body(content: Content) -> some View {
+    content
+      .padding(.bottom, offset)
+      .onAppear {
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { notif in
+          let value = notif.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+          let height = value.height
+          let bottomInset = UIApplication.shared.windows.first?.safeAreaInsets.bottom
+          self.offset = height - (bottomInset ?? 0)
+        }
+
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { notif in
+          self.offset = 0
+        }
+    }
+  }
+}
+
+
+
 #if canImport(UIKit)
 extension View {
     func hideKeyboard() {
+        
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 #endif
+
 

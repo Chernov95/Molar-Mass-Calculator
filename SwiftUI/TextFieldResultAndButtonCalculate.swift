@@ -24,18 +24,13 @@ struct TextFieldResultAndButtonCalculate : View {
                  ZStack{
                      VStack {
                              TextField("Chemical Formula", text: $textFieldText)
-                                         .font(Font.custom("Hoefler Text", size: 25))
-                                         .padding()
-                                         .textFieldStyle(.roundedBorder)
+                             .textFieldStyle(MyTextFieldStyle())
+                             .accentColor(.black)
                                          .toolbar(content: {
                                              ToolbarItemGroup(placement: .keyboard) {
                                                  Button {
                                                      print("Button is clicked")
                                                  } label: {
-//                                                     Text("H2SO4")
-//                                                     Text("H2SO4")
-//                                                     Text("H2SO4")
-//                                                     Text("H2SO4")
 //                                                     Text("H2SO4")
                                                  }
 
@@ -43,37 +38,43 @@ struct TextFieldResultAndButtonCalculate : View {
                                          })
                                          .multilineTextAlignment(.center)
                                          .showClearButton($textFieldText)
+                                        
+                                        
                          
                          //It hides default suggestion for the keyboard
                                          .keyboardType(.alphabet)
                                          .disableAutocorrection(true)
-                         
+                                        
                                         
                                          .onChange(of: textFieldText) { textFieldText in
                                             
                                              molarMassAndUnits = ""
                                              calculation = Calculation()
                                              chemicalFormulaIsNotIdentified = false
-                                }
+                                         }
                          Spacer()
+                      
+
                          if molarMassAndUnits != "0.0 g / mol" && molarMassAndUnits != "0.0 g" {
                              MassTextView(massAndUnits: molarMassAndUnits)
+                             Spacer()
                          }else{
                              ErrorView()
+                             Spacer()
                          }
                          if chemicalFormulaIsNotIdentified {
                              ErrorView()
+                             Spacer()
                          }
                     }
                      Spacer()
                                 .padding(.bottom, 100)
                      }
+                 
                      .background(
                         Color("TopAndBottomViewColor")
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                      )
-                     
-                     
                      .padding()
                      .clipped()
                      .shadow(radius: 4, x: 1, y: 3)
@@ -107,25 +108,38 @@ struct TextFieldResultAndButtonCalculate : View {
                                  }else{
                                      chemicalFormulaIsNotIdentified = false
                                      
+                                     
+                                     let impactMed = UIImpactFeedbackGenerator(style: .heavy)
+                                        impactMed.impactOccurred()
+                                     
+                                     
                                      //Get a feedback from user
                                      let deadline = DispatchTime.now() + .seconds(2)
                                      DispatchQueue.main.asyncAfter(deadline: deadline) {
                                          reviewService.requestReview()
                                      }
+                                     
                                  }
-
+                            
                                  
                                 }
+                                 
                          }
-                     
+                         
                      print("Hello, after pressing button array with keys is \(calculation.keysForDictionaryAbove) , dictionary is  \(calculation.dictionaryToShowPercantageOfEveryAtom)")
+                         
                      hideKeyboard()
                  } label: {
-                     Image("buttonCalculate")
+                     Text("Calculate")
+                         .frame(width: 300, height: 50)
+                         .foregroundColor(.white)
+                         .background(.red)
                  }
              }
-      
         }
+      
+       
+        
 }
 
 
@@ -149,12 +163,11 @@ struct TextFieldClearButton: ViewModifier {
                             Image(systemName: "multiply.circle.fill")
                         }
                         .foregroundColor(.secondary)
-                        .padding(.trailing, 18)
+                        .padding(.trailing, 25)
                     }
                 }
             }
-        
-       
+            
     }
 }
 
@@ -167,6 +180,7 @@ struct Textfield_Previews: PreviewProvider {
 
     static var previews: some View {
         TextFieldResultAndButtonCalculate(calculation: calculation)
+            .preferredColorScheme(.dark)
     }
 }
 
