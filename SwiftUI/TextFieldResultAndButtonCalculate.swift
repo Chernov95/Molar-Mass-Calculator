@@ -17,8 +17,9 @@ struct TextFieldResultAndButtonCalculate : View {
         @State var molarMassAndUnits : String = ""
         @State var keysForDictionaryAbove : [String] = []
         @State var chemicalFormulaIsNotIdentified = false
+        @State var chemicalSubstances = ["H2O", "H2SO4", "Al(OH)3", "Fe(OH)3"]
         let reviewService = ReviewService.shared
-        let chemicalSubstances = ["H2O", "H2SO4", "Al(OH)3", "CH4", "KMnO4", "Fe(OH)3"]
+        
 
          var body: some View {
              VStack {
@@ -27,24 +28,43 @@ struct TextFieldResultAndButtonCalculate : View {
                              TextField("Chemical Formula", text: $textFieldText)
                              .textFieldStyle(MyTextFieldStyle())
                              .accentColor(.black)
-                                         .toolbar(content: {
-                                            
-                                             ToolbarItemGroup(placement: .keyboard) {
-                                                 
-                                                     ForEach(chemicalSubstances, id: \.self) { chemicalSubstance in
-                                                         Spacer()
-                                                         Button {
-                                                             print("Button is clicked")
-                                                         } label: {
-                                                             Text("\(chemicalSubstance)")
-                                                         }
-                                                         Spacer()
-                                                     }
-                                                 
-                                                 
-                                            }
+                        
+                             .toolbar(content: {
+                                 
+                                
+                                
+                                 ToolbarItemGroup(placement: .keyboard) {
+                                     
+                                    
+                                     ForEach(0...2, id: \.self) { i in
+                                         
+                                         Spacer()
+                                         Button {
+                                             print("Button is clicked")
+                                             textFieldText = chemicalSubstances[i]
+                                         } label: {
+                                             Text("\(chemicalSubstances[i])")
+                                         }
+                                         Spacer()
+                                         
+                                     }
+                                     
+//                                                     ForEach(chemicalSubstances, id: \.self) { chemicalSubstance in
+//                                                         Spacer()
+//                                                         Button {
+//                                                             print("Button is clicked")
+//                                                         } label: {
+//                                                             Text("\(chemicalSubstance)")
+//                                                         }
+//                                                         Spacer()
+//                                                     }
+      
+                             }
 
-                                         })
+                             })
+                    
+                        
+
                                          .multilineTextAlignment(.center)
                                          .showClearButton($textFieldText)
                                         
@@ -60,6 +80,10 @@ struct TextFieldResultAndButtonCalculate : View {
                                              molarMassAndUnits = ""
                                              calculation = Calculation()
                                              chemicalFormulaIsNotIdentified = false
+                                             
+                                             self.chemicalSubstances.sort { lhs, rhs in
+                                                 return lhs.equalityScore(with: textFieldText) > rhs.equalityScore(with: textFieldText)
+                                             }
                                          }
                          Spacer()
                       
@@ -118,7 +142,7 @@ struct TextFieldResultAndButtonCalculate : View {
                                      chemicalFormulaIsNotIdentified = false
                                      
                                      
-                                     let impactMed = UIImpactFeedbackGenerator(style: .heavy)
+                                     let impactMed = UIImpactFeedbackGenerator(style: .rigid)
                                         impactMed.impactOccurred()
                                      
                                      
@@ -167,6 +191,7 @@ struct TextFieldClearButton: ViewModifier {
                         Spacer()
                         Button {
                             fieldText = ""
+                                
                             print("Clear button is pressed")
                         } label: {
                             Image(systemName: "multiply.circle.fill")
@@ -176,7 +201,6 @@ struct TextFieldClearButton: ViewModifier {
                     }
                 }
             }
-            
     }
 }
 

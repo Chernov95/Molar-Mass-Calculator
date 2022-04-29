@@ -9,13 +9,7 @@
 import Foundation
 
 
-struct Result {
-    
-    
-    
 
-    
-}
 
 
 struct Calculation {

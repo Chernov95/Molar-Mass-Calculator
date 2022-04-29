@@ -12,6 +12,7 @@
 		C93171D728081AC7005E0C16 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93171D628081AC7005E0C16 /* TextViews.swift */; };
 		C93171D928082C40005E0C16 /* TextFieldResultAndButtonCalculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93171D828082C40005E0C16 /* TextFieldResultAndButtonCalculate.swift */; };
 		C958B13F2808610D00946B34 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C958B13E2808610D00946B34 /* Calculation.swift */; };
+		C9666B69281C0C3300313F55 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9666B68281C0C3300313F55 /* Extensions.swift */; };
 		C970986D23DA167900792AF4 /* Tahoma Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C970986B23DA167800792AF4 /* Tahoma Bold.ttf */; };
 		C970986E23DA167900792AF4 /* Tahoma.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C970986C23DA167900792AF4 /* Tahoma.ttf */; };
 		C970987123DA2DB500792AF4 /* LucidaGrande.ttc in Resources */ = {isa = PBXBuildFile; fileRef = C970987023DA2DB400792AF4 /* LucidaGrande.ttc */; };
@@ -82,6 +83,7 @@
 		C93171D628081AC7005E0C16 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
 		C93171D828082C40005E0C16 /* TextFieldResultAndButtonCalculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldResultAndButtonCalculate.swift; sourceTree = "<group>"; };
 		C958B13E2808610D00946B34 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
+		C9666B68281C0C3300313F55 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C970986B23DA167800792AF4 /* Tahoma Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tahoma Bold.ttf"; sourceTree = "<group>"; };
 		C970986C23DA167900792AF4 /* Tahoma.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tahoma.ttf; sourceTree = "<group>"; };
 		C970987023DA2DB400792AF4 /* LucidaGrande.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = LucidaGrande.ttc; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				C98C15282586A6A500432516 /* ReviewService.swift */,
 				C958B13E2808610D00946B34 /* Calculation.swift */,
+				C9666B68281C0C3300313F55 /* Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C93171D928082C40005E0C16 /* TextFieldResultAndButtonCalculate.swift in Sources */,
+				C9666B69281C0C3300313F55 /* Extensions.swift in Sources */,
 				C920ED1523D7ADFA005E99CF /* TableViewCell.swift in Sources */,
 				C98C15292586A6A500432516 /* ReviewService.swift in Sources */,
 				C958B13F2808610D00946B34 /* Calculation.swift in Sources */,
