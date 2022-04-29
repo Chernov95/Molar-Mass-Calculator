@@ -11,7 +11,6 @@ import Foundation
 
 
 
-
 struct Calculation {
     
     var dictionaryToShowPercantageOfEveryAtom : [String : (massOfChemicelElement : Double ,numberOfAtoms : Int)] = [:]

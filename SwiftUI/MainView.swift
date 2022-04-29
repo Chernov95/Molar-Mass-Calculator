@@ -14,9 +14,6 @@ struct MainView: View {
     @State private var calculation = Calculation()
   
     var body: some View {
-        
-
-
 
         GeometryReader { _ in
             ZStack {
@@ -27,10 +24,7 @@ struct MainView: View {
                     BottomView(calculation: $calculation)
 
                 }
-
-                //When dark mode is on it keeps the background color white
                 .background(Color("BackgroundColor"))
-
                 .onTapGesture {
                     hideKeyboard()
                 }
