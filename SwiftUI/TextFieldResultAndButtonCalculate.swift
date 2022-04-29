@@ -17,7 +17,7 @@ struct TextFieldResultAndButtonCalculate : View {
         @State var molarMassAndUnits : String = ""
         @State var keysForDictionaryAbove : [String] = []
         @State var chemicalFormulaIsNotIdentified = false
-        @State var chemicalSubstances = ["H2O", "H2SO4", "Al(OH)3", "Fe(OH)3"]
+        @State var chemicalSubstances = ["H2O", "H2SO4", "Al(OH)3", "Fe(OH)3", "H3PO4", "NaCl", "Na2O", "MgO"]
         let reviewService = ReviewService.shared
         
 
@@ -49,17 +49,7 @@ struct TextFieldResultAndButtonCalculate : View {
                                          Spacer()
                                          
                                      }
-                                     
-//                                                     ForEach(chemicalSubstances, id: \.self) { chemicalSubstance in
-//                                                         Spacer()
-//                                                         Button {
-//                                                             print("Button is clicked")
-//                                                         } label: {
-//                                                             Text("\(chemicalSubstance)")
-//                                                         }
-//                                                         Spacer()
-//                                                     }
-      
+
                              }
 
                              })

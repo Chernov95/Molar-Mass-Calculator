@@ -77,7 +77,7 @@ struct DataLabel : View {
             .multilineTextAlignment(.center)
             .lineLimit(1)
             .frame(width: 50, height: 20, alignment: .center)
-           
+            .minimumScaleFactor(0.01)
       
     }
         
@@ -106,7 +106,7 @@ struct MyTextFieldStyle: TextFieldStyle {
         .padding(10)
        
         .background(
-            RoundedRectangle(cornerRadius: 20, style: .continuous)
+            RoundedRectangle(cornerRadius: 15, style: .continuous)
                 .stroke(Color.white, lineWidth: 3)
         ).padding()
             
