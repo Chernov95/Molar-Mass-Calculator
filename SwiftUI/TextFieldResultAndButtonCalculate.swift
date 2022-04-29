@@ -44,6 +44,7 @@ struct TextFieldResultAndButtonCalculate : View {
                                              textFieldText = chemicalSubstances[i]
                                          } label: {
                                              Text("\(chemicalSubstances[i])")
+                                                 .foregroundColor(Color("SuggestionsColor"))
                                          }
                                          Spacer()
                                          
