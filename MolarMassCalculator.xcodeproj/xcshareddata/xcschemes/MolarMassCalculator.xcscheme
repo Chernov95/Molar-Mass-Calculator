@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1240"
+   LastUpgradeVersion = "1130"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "28BFDC89BA4363F4F3576DEC70EE10AE"
-               BuildableName = "ChameleonFramework.framework"
-               BlueprintName = "ChameleonFramework"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "C9F77ACC23CE02E60056288C"
+               BuildableName = "Molar Mass Calculator.app"
+               BlueprintName = "MolarMassCalculator"
+               ReferencedContainer = "container:MolarMassCalculator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,6 +40,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C9F77ACC23CE02E60056288C"
+            BuildableName = "Molar Mass Calculator.app"
+            BlueprintName = "MolarMassCalculator"
+            ReferencedContainer = "container:MolarMassCalculator.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -47,6 +57,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C9F77ACC23CE02E60056288C"
+            BuildableName = "Molar Mass Calculator.app"
+            BlueprintName = "MolarMassCalculator"
+            ReferencedContainer = "container:MolarMassCalculator.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
