@@ -143,7 +143,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         //If there is spaces , delete it
         molecule = String(molecule.compactMap({ $0.isWhitespace ? nil : $0 }))
       
-         var mendeleevChart = [
+        let mendeleevChart = [
          
                "H" : 1.0079 , "O" : 15.9994 , "Fe" : 55.845 , "Se" : 78.96 , "N" : 14.01 , "C" : 12.0107 , "Mn" : 54.938 , "He" : 4.0026 , "Li" : 6.941 , "Be" : 9.0122 , "B" : 10.811 ,
                "F" : 18.9984 , "Ne" : 20.1797 , "Na" : 22.9897 , "Mg" : 24.305 , "Al" : 26.9815 , "Si" : 28.0855 , "P" : 30.9738 , "S" : 32.065 , "Cl" : 35.453 , "K" : 39.0983 , "Ar" : 39.948 , "Ca" : 40.078 , "Sc" : 44.9559 , "Ti" : 47.867 , "V" : 50.9415 , "Cr" : 51.9961 , "Ni" : 58.6934  , "Co" : 58.9332 , "Cu" : 63.546 , "Zn" : 65.39 , "Ga" : 69.723 , "Ge" : 72.64 , "As" : 74.9216 ,
@@ -250,7 +250,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
                                       let atomThatNeedToMultiply = numberOfChemicalElementInMolecule
 //                                      numbersAndTheirsIndexes.append((indexIs! , atomThatNeedToMultiply))
                             if numbersAndTheirsIndexes.last?.1 == atomThatNeedToMultiply {
-                                var needToInterpolare = String(numbersAndTheirsIndexes[numbersAndTheirsIndexes.count - 1].0) + String(indexIs!)
+                                let needToInterpolare = String(numbersAndTheirsIndexes[numbersAndTheirsIndexes.count - 1].0) + String(indexIs!)
                                 numbersAndTheirsIndexes[numbersAndTheirsIndexes.count - 1].0 = Int(needToInterpolare)!
                             }else{
                                 numbersAndTheirsIndexes.append((indexIs! , atomThatNeedToMultiply))
@@ -285,14 +285,14 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
                                                                                                 return 0.0
                                                                                             }
 
-                                                                                              var nextLetter = letters[numberOfIterations]
+                                                                                              let nextLetter = letters[numberOfIterations]
                                                                                             if Int(nextLetter!) == nil  {
                                                                                                 
                                                                                                 if Character(nextLetter!).isLowercase != true  {
                                                                                                     let atomThatNeedToMultiply = numberOfChemicalElementsInMoleculeInParentiacies
                                                                                                     numbersAndThersIndexexInParentaciew.append((1 , atomThatNeedToMultiply))
                                                                                                     print(numbersAndThersIndexexInParentaciew.count)
-                                                                                               print("Current charakter is \(character) next is \(nextLetter)")
+                                                                                               
                                                                                                     
                                                                                                 
                                                                                             }
@@ -328,14 +328,14 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
                                     if numberOfIterations == letters.count {
                                         return 0.0
                                     }
-                                    var nextLetter = letters[numberOfIterations]
+                                    let nextLetter = letters[numberOfIterations]
                                   if Int(nextLetter!) == nil  {
                                       
                                       if Character(nextLetter!).isUppercase == true  {
                                           let atomThatNeedToMultiply = numberOfChemicalElementsInMoleculeInParentiacies
                                           numbersAndThersIndexexInParentaciew.append((1 , atomThatNeedToMultiply))
                                           print(numbersAndThersIndexexInParentaciew.count)
-                                     print("Current charakter is \(character) next is \(nextLetter) I am adding number 1")
+                                     
                                       
                                       
                                   }
@@ -687,9 +687,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
                     } else {
                         dictionary[chemicalElement] = (dictionary[chemicalElement]!.massOfChemicelElement + mendeleevChart[chemicalElement]! , dictionary[chemicalElement]!.numberOfAtoms + 1)
                     }
-                    if chemicalElement != "Fe" {
-                        print("Chemical element is 2 \(chemicalElement)  and number of atoms is \(dictionary[chemicalElement]?.numberOfAtoms)")
-                    }
+                    
                     
                     
                 }

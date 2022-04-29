@@ -159,8 +159,8 @@ struct Calculation {
                                                                                                 if Character(nextLetter!).isLowercase != true  {
                                                                                                     let atomThatNeedToMultiply = numberOfChemicalElementsInMoleculeInParentiacies
                                                                                                     numbersAndThersIndexexInParentaciew.append((1 , atomThatNeedToMultiply))
-                                                                                                    print(numbersAndThersIndexexInParentaciew.count)
-                                                                                               print("Current charakter is \(character) next is \(nextLetter)")
+                                                                                                    
+                                                                                               
                                                                                                     
                                                                                                 
                                                                                             }
@@ -202,8 +202,8 @@ struct Calculation {
                                       if Character(nextLetter!).isUppercase == true  {
                                           let atomThatNeedToMultiply = numberOfChemicalElementsInMoleculeInParentiacies
                                           numbersAndThersIndexexInParentaciew.append((1 , atomThatNeedToMultiply))
-                                          print(numbersAndThersIndexexInParentaciew.count)
-                                     print("Current charakter is \(character) next is \(nextLetter) I am adding number 1")
+                                       
+                                   
                                       
                                       
                                   }
@@ -555,9 +555,7 @@ struct Calculation {
                     } else {
                         dictionary[chemicalElement] = (dictionary[chemicalElement]!.massOfChemicelElement + mendeleevChart[chemicalElement]! , dictionary[chemicalElement]!.numberOfAtoms + 1)
                     }
-                    if chemicalElement != "Fe" {
-                        print("Chemical element is 2 \(chemicalElement)  and number of atoms is \(dictionary[chemicalElement]?.numberOfAtoms)")
-                    }
+                    
                     
                     
                     
