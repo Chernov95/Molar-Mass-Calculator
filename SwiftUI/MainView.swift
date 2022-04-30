@@ -14,25 +14,19 @@ struct MainView: View {
     @State private var calculation = Calculation()
   
     var body: some View {
-
         GeometryReader { _ in
             ZStack {
                 VStack {
-
                     TextFieldResultAndButtonCalculate(calculation: $calculation)
                     Spacer()
                     BottomView(calculation: $calculation)
-
                 }
                 .background(Color("BackgroundColor"))
                 .onTapGesture {
                     hideKeyboard()
                 }
             }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-
         }
-            
-       
     }
 }
 
@@ -99,13 +93,13 @@ struct DataLabels : View {
                     let numberOfAtoms = calculation.dictionaryToShowPercantageOfEveryAtom[symbol]!.numberOfAtoms * Int(bigMultiplyer)
                     let massOfTheMolecule = calculation.massOfWholeMoleculeToCalculatePersentage / bigMultiplyer
                     let percentage = (massOfTheAtom / massOfTheMolecule) * 100
-                    
                     if i == 0 {
-                        DetailedData(symbol: symbol, massOfTheAtom: String(massOfTheAtom.rounded(toPlaces: 2)), numberOfAtoms: String(numberOfAtoms), percentage: String(percentage.rounded(toPlaces: 2)), color: "Red")
+                        DetailedData(symbol: symbol, massOfTheAtom: String(massOfTheAtom.rounded(toPlaces: 2)), numberOfAtoms: String(numberOfAtoms), percentage: String(percentage.rounded(toPlaces: 2)), color: .red )
+                       
                     }else if i == calculation.keysForDictionaryAbove.count - 1 {
-                        DetailedData(symbol: symbol, massOfTheAtom: String(massOfTheAtom.rounded(toPlaces: 2)), numberOfAtoms: String(numberOfAtoms), percentage: String(percentage.rounded(toPlaces: 2)), color: "Green")
+                        DetailedData(symbol: symbol, massOfTheAtom: String(massOfTheAtom.rounded(toPlaces: 2)), numberOfAtoms: String(numberOfAtoms), percentage: String(percentage.rounded(toPlaces: 2)), color: .green)
                     }else{
-                        DetailedData(symbol: symbol, massOfTheAtom: String(massOfTheAtom.rounded(toPlaces: 2)), numberOfAtoms: String(numberOfAtoms), percentage: String(percentage.rounded(toPlaces: 2)))
+                        DetailedData(symbol: symbol, massOfTheAtom: String(massOfTheAtom.rounded(toPlaces: 2)), numberOfAtoms: String(numberOfAtoms), percentage: String(percentage.rounded(toPlaces: 2)), color: .random)
                     }
        
                 }
@@ -123,7 +117,7 @@ struct DetailedData : View {
     var massOfTheAtom : String
     var numberOfAtoms : String
     var percentage : String
-    var color : String?
+    var color : Color?
     
     var body: some View {
             VStack {

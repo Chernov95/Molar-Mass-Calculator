@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 extension String {
@@ -19,6 +20,14 @@ extension String {
             // you could of course have other criteria, like string.contains(self)
             return 1 / Double(abs(self.count - string.count))
         }
+    }
+}
+
+extension Color {
+    static var random: Color {
+        return Color(red: .random(in: 0...1),
+                     green: .random(in: 0...1),
+                     blue: .random(in: 0...1))
     }
 }
 

@@ -59,26 +59,24 @@ struct DetailsTextView : View {
             .foregroundColor(Color("DetailsLabelTextViewColor"))
             .bold()
             .font(Font.custom("Futura Bold", size: 18.7, relativeTo: .headline))
-           
     }
 }
 
 struct DataLabel : View {
     
     var text : String
-    var color : String?
+    var color : Color?
 
     
     var body: some View {
         Text(text)
-            .foregroundColor(Color(color ?? "DetailsLabelTextViewColor"))
+            .foregroundColor(color ?? Color("DetailsLabelTextViewColor"))
             .foregroundColor(.red)
             .font(Font.custom("LucidaGrande", size: 17, relativeTo: .body))
             .multilineTextAlignment(.center)
             .lineLimit(1)
             .frame(width: 50, height: 20, alignment: .center)
             .minimumScaleFactor(0.01)
-      
     }
         
 }
@@ -95,7 +93,6 @@ struct DetailsLabel : View {
             .foregroundColor(Color("DetailsLabelTextViewColor"))
             .font(Font.custom("Verdana", size: 11, relativeTo: .caption2))
             .multilineTextAlignment(.center)
-            
     }
 }
 
@@ -104,12 +101,34 @@ struct MyTextFieldStyle: TextFieldStyle {
         configuration
         .font(Font.custom("Hoefler Text", size: 25))
         .padding(10)
-       
         .background(
             RoundedRectangle(cornerRadius: 15, style: .continuous)
                 .stroke(Color.white, lineWidth: 3)
         ).padding()
             
+    }
+}
+
+struct TextFieldClearButton: ViewModifier {
+    @Binding var fieldText: String
+
+    func body(content: Content) -> some View {
+            content
+                .overlay {
+                if !fieldText.isEmpty {
+                    HStack {
+                        Spacer()
+                        Button {
+                            fieldText = ""
+                            print("Clear button is pressed")
+                        } label: {
+                            Image(systemName: "multiply.circle.fill")
+                        }
+                        .foregroundColor(.secondary)
+                        .padding(.trailing, 25)
+                    }
+                }
+            }
     }
 }
 
