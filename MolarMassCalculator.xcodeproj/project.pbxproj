@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,7 +25,7 @@
 		C99674A123E251F400A31232 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99674A023E251F400A31232 /* InterfaceController.swift */; };
 		C99674A323E251F400A31232 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99674A223E251F400A31232 /* ExtensionDelegate.swift */; };
 		C99674A523E251F500A31232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99674A423E251F500A31232 /* Assets.xcassets */; };
-		C99674A923E251F500A31232 /* Molar Mass Calculator Apple Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C996748F23E251F300A31232 /* Molar Mass Calculator Apple Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C99674A923E251F500A31232 /* Molar Mass Calculator Apple Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C996748F23E251F300A31232 /* Molar Mass Calculator Apple Watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C9F77AD123CE02E60056288C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F77AD023CE02E60056288C /* AppDelegate.swift */; };
 		C9F77AD523CE02E60056288C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F77AD423CE02E60056288C /* ViewController.swift */; };
 		C9F77AD823CE02E60056288C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F77AD623CE02E60056288C /* Main.storyboard */; };
@@ -108,6 +108,7 @@
 		C99674A223E251F400A31232 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		C99674A423E251F500A31232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C99674A623E251F500A31232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9D90C66281D81E8003405E5 /* MolarMassCalculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MolarMassCalculator.entitlements; sourceTree = "<group>"; };
 		C9F77ACD23CE02E60056288C /* Molar Mass Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Molar Mass Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F77AD023CE02E60056288C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9F77AD423CE02E60056288C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +235,7 @@
 		C9F77AC423CE02E60056288C = {
 			isa = PBXGroup;
 			children = (
+				C9D90C66281D81E8003405E5 /* MolarMassCalculator.entitlements */,
 				C93171D328081693005E0C16 /* SwiftUI */,
 				C9F77ACF23CE02E60056288C /* UIKit */,
 				C996749023E251F300A31232 /* Molar Mass Calculator Apple Watch */,
@@ -524,6 +526,7 @@
 		};
 		C99674A823E251F500A31232 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = C996748E23E251F300A31232 /* Molar Mass Calculator Apple Watch */;
 			targetProxy = C99674A723E251F500A31232 /* PBXContainerItemProxy */;
 		};
@@ -804,6 +807,7 @@
 			baseConfigurationReference = 1ABDF1C8FAB4D3EF2A7E9E9D /* Pods-MolarMassCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MolarMassCalculator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3QCJKKKPU8;
@@ -816,8 +820,9 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.filipcernov.molar-mass-calculator";
 				PRODUCT_NAME = "Molar Mass Calculator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -826,6 +831,7 @@
 			baseConfigurationReference = E7CDF0EF389A64E5B9F2CA00 /* Pods-MolarMassCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MolarMassCalculator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3QCJKKKPU8;
@@ -838,8 +844,9 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.filipcernov.molar-mass-calculator";
 				PRODUCT_NAME = "Molar Mass Calculator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
