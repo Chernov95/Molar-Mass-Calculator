@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B979743ED3363ACD5D45D00C /* Pods_MolarMassCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC84916522A3E871EA3E005 /* Pods_MolarMassCalculator.framework */; };
-		C91F301A2822B09900C40C44 /* Koulen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C91F30192822B09900C40C44 /* Koulen-Regular.ttf */; };
 		C920ED1523D7ADFA005E99CF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C920ED1423D7ADFA005E99CF /* TableViewCell.swift */; };
 		C93171D5280816AA005E0C16 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93171D4280816AA005E0C16 /* MainView.swift */; };
 		C93171D728081AC7005E0C16 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93171D628081AC7005E0C16 /* TextViews.swift */; };
@@ -20,6 +19,7 @@
 		C970986E23DA167900792AF4 /* Tahoma.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C970986C23DA167900792AF4 /* Tahoma.ttf */; };
 		C970987123DA2DB500792AF4 /* LucidaGrande.ttc in Resources */ = {isa = PBXBuildFile; fileRef = C970987023DA2DB400792AF4 /* LucidaGrande.ttc */; };
 		C98C15292586A6A500432516 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C15282586A6A500432516 /* ReviewService.swift */; };
+		C98E5D702822D304003CDF1F /* Koulen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C98E5D6F2822D304003CDF1F /* Koulen-Regular.ttf */; };
 		C996749323E251F300A31232 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C996749123E251F300A31232 /* Interface.storyboard */; };
 		C996749523E251F400A31232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C996749423E251F400A31232 /* Assets.xcassets */; };
 		C996749C23E251F400A31232 /* Molar Mass Calculator Apple Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C996749B23E251F400A31232 /* Molar Mass Calculator Apple Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -88,7 +88,6 @@
 		5EE66219FF170633F2A9F42A /* Pods-molecular wedth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-molecular wedth.debug.xcconfig"; path = "Target Support Files/Pods-molecular wedth/Pods-molecular wedth.debug.xcconfig"; sourceTree = "<group>"; };
 		7A6694678BBD66C40878B729 /* Pods-molecular wedth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-molecular wedth.release.xcconfig"; path = "Target Support Files/Pods-molecular wedth/Pods-molecular wedth.release.xcconfig"; sourceTree = "<group>"; };
 		BEC84916522A3E871EA3E005 /* Pods_MolarMassCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MolarMassCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C91F30192822B09900C40C44 /* Koulen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Koulen-Regular.ttf"; path = "../../../Koulen/Koulen-Regular.ttf"; sourceTree = "<group>"; };
 		C920ED1423D7ADFA005E99CF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C93171D4280816AA005E0C16 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C93171D628081AC7005E0C16 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
@@ -101,6 +100,7 @@
 		C970986C23DA167900792AF4 /* Tahoma.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tahoma.ttf; sourceTree = "<group>"; };
 		C970987023DA2DB400792AF4 /* LucidaGrande.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = LucidaGrande.ttc; sourceTree = "<group>"; };
 		C98C15282586A6A500432516 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
+		C98E5D6F2822D304003CDF1F /* Koulen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Koulen-Regular.ttf"; sourceTree = "<group>"; };
 		C996748F23E251F300A31232 /* Molar Mass Calculator Apple Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Molar Mass Calculator Apple Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C996749223E251F300A31232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		C996749423E251F400A31232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 		C970986423DA101400792AF4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				C91F30192822B09900C40C44 /* Koulen-Regular.ttf */,
+				C98E5D6F2822D304003CDF1F /* Koulen-Regular.ttf */,
 				C970986C23DA167900792AF4 /* Tahoma.ttf */,
 				C970986B23DA167800792AF4 /* Tahoma Bold.ttf */,
 				C970987023DA2DB400792AF4 /* LucidaGrande.ttc */,
@@ -430,7 +430,7 @@
 				C9F77ADD23CE02E70056288C /* LaunchScreen.storyboard in Resources */,
 				C9F77ADA23CE02E70056288C /* Assets.xcassets in Resources */,
 				C970987123DA2DB500792AF4 /* LucidaGrande.ttc in Resources */,
-				C91F301A2822B09900C40C44 /* Koulen-Regular.ttf in Resources */,
+				C98E5D702822D304003CDF1F /* Koulen-Regular.ttf in Resources */,
 				C970986D23DA167900792AF4 /* Tahoma Bold.ttf in Resources */,
 				C970986E23DA167900792AF4 /* Tahoma.ttf in Resources */,
 				C9F77AD823CE02E60056288C /* Main.storyboard in Resources */,

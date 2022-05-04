@@ -83,9 +83,17 @@ struct TextFieldResultAndButtonCalculate : View {
                          .font(Font.custom("Koulen-Regular", size: 25))
                          .frame(width: 250, height: 50)
                          .foregroundColor(.white)
+                         .overlay(
+                            
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.white, lineWidth:8)
+                              
+                         )
                          .background(Color("CalculateButtonColor"))
-                         .cornerRadius(3)
+                         .cornerRadius(10)
+                         .shadow(color: .gray, radius: 2, x: 1, y: 2)
                  }
+                 
              }
         }
     
