@@ -27,7 +27,7 @@ struct TextFieldResultAndButtonCalculate : View {
                      VStack {
                              TextField("Chemical Formula", text: $textFieldText)
                              .textFieldStyle(MyTextFieldStyle())
-                             .accentColor(.black)
+                             .accentColor(Color("CursorColor"))
                              .toolbar(content: {
                                  ToolbarItemGroup(placement: .keyboard) {
                                      ForEach(0...2, id: \.self) { i in
@@ -84,16 +84,13 @@ struct TextFieldResultAndButtonCalculate : View {
                          .frame(width: 250, height: 50)
                          .foregroundColor(.white)
                          .overlay(
-                            
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.white, lineWidth:8)
-                              
                          )
                          .background(Color("CalculateButtonColor"))
                          .cornerRadius(10)
                          .shadow(color: .gray, radius: 2, x: 1, y: 2)
                  }
-                 
              }
         }
     
