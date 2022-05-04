@@ -821,7 +821,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.filipcernov.molar-mass-calculator";
 				PRODUCT_NAME = "Molar Mass Calculator";
 				SUPPORTS_MACCATALYST = YES;
@@ -845,7 +845,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.filipcernov.molar-mass-calculator";
 				PRODUCT_NAME = "Molar Mass Calculator";
 				SUPPORTS_MACCATALYST = YES;

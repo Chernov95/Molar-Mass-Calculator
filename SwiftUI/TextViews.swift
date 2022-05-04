@@ -44,7 +44,7 @@ struct ErrorView : View {
    
     
     var body: some View {
-        Text("Chemical formula is not identified\n😬\nCheck your spelling 🔍")
+        Text("The chemical formula is not identified\n😬\nCheck your spelling 🔍")
             .foregroundColor(.indigo)
             .font(Font.custom("LucidaGrande", size: 15, relativeTo: .subheadline))
             .multilineTextAlignment(.center)
