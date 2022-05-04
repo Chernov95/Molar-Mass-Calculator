@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B979743ED3363ACD5D45D00C /* Pods_MolarMassCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC84916522A3E871EA3E005 /* Pods_MolarMassCalculator.framework */; };
+		C91F301A2822B09900C40C44 /* Koulen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C91F30192822B09900C40C44 /* Koulen-Regular.ttf */; };
 		C920ED1523D7ADFA005E99CF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C920ED1423D7ADFA005E99CF /* TableViewCell.swift */; };
 		C93171D5280816AA005E0C16 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93171D4280816AA005E0C16 /* MainView.swift */; };
 		C93171D728081AC7005E0C16 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93171D628081AC7005E0C16 /* TextViews.swift */; };
@@ -87,6 +88,7 @@
 		5EE66219FF170633F2A9F42A /* Pods-molecular wedth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-molecular wedth.debug.xcconfig"; path = "Target Support Files/Pods-molecular wedth/Pods-molecular wedth.debug.xcconfig"; sourceTree = "<group>"; };
 		7A6694678BBD66C40878B729 /* Pods-molecular wedth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-molecular wedth.release.xcconfig"; path = "Target Support Files/Pods-molecular wedth/Pods-molecular wedth.release.xcconfig"; sourceTree = "<group>"; };
 		BEC84916522A3E871EA3E005 /* Pods_MolarMassCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MolarMassCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91F30192822B09900C40C44 /* Koulen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Koulen-Regular.ttf"; path = "../../../Koulen/Koulen-Regular.ttf"; sourceTree = "<group>"; };
 		C920ED1423D7ADFA005E99CF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C93171D4280816AA005E0C16 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C93171D628081AC7005E0C16 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		C970986423DA101400792AF4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				C91F30192822B09900C40C44 /* Koulen-Regular.ttf */,
 				C970986C23DA167900792AF4 /* Tahoma.ttf */,
 				C970986B23DA167800792AF4 /* Tahoma Bold.ttf */,
 				C970987023DA2DB400792AF4 /* LucidaGrande.ttc */,
@@ -427,6 +430,7 @@
 				C9F77ADD23CE02E70056288C /* LaunchScreen.storyboard in Resources */,
 				C9F77ADA23CE02E70056288C /* Assets.xcassets in Resources */,
 				C970987123DA2DB500792AF4 /* LucidaGrande.ttc in Resources */,
+				C91F301A2822B09900C40C44 /* Koulen-Regular.ttf in Resources */,
 				C970986D23DA167900792AF4 /* Tahoma Bold.ttf in Resources */,
 				C970986E23DA167900792AF4 /* Tahoma.ttf in Resources */,
 				C9F77AD823CE02E60056288C /* Main.storyboard in Resources */,

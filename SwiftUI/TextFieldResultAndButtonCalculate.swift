@@ -79,10 +79,12 @@ struct TextFieldResultAndButtonCalculate : View {
                  Button {
                    buttonPressed()
                  } label: {
-                     Text("Calculate")
-                         .frame(width: 300, height: 50)
+                     Text("Calculate".uppercased())
+                         .font(Font.custom("Koulen-Regular", size: 25))
+                         .frame(width: 250, height: 50)
                          .foregroundColor(.white)
-                         .background(.red)
+                         .background(Color("CalculateButtonColor"))
+                         .cornerRadius(3)
                  }
              }
         }
@@ -149,7 +151,8 @@ struct Textfield_Previews: PreviewProvider {
 
     static var previews: some View {
         TextFieldResultAndButtonCalculate(calculation: calculation)
-            .preferredColorScheme(.dark)
+            .previewDevice("iPhone SE (3rd generation)")
+            .preferredColorScheme(.light)
     }
 }
 

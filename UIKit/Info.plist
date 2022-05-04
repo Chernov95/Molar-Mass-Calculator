@@ -24,6 +24,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Koulen-Regular.ttf</string>
 		<string>LucidaGrande.ttc</string>
 		<string>Tahoma.ttf</string>
 		<string>Tahoma Bold.ttf</string>
