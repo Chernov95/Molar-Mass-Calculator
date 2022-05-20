@@ -2,6 +2,10 @@
 
 ### Screen Shots
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/45902091/169576667-38dd5cf0-0edc-480f-b21c-f2f66fb8ec7f.png"
+width="240" height="510">,<img src="https://user-images.githubusercontent.com/45902091/169574397-9c1b02ae-9d7b-4c6a-bbea-56639f88cd0e.gif" width="240" height="510">,<img src="https://user-images.githubusercontent.com/45902091/169575584-8d38d051-0407-46c9-a36d-d1e4be4a0ede.gif" width="240" height="510">,<img src="https://user-images.githubusercontent.com/45902091/169577032-bec88aec-129a-469d-a553-582526923524.png" width="240" height="510">
+</p>
 
 
 ---
@@ -16,9 +20,9 @@
 
 ## Description
 
-- This calculator computes the total molar mass and mass percent of any element or compound.
+- This calculator computes the total molar mass and mass percent of any element or compound
 
-- The calculator will recognize any entered formulas including organic compounds
+- The calculator will recognize any entered formulas including organic compounds. For example: H2SO4, Fe(OH)3, CH3COOH, etc.
 
 - This application is adapted for iPhone, iPad and AppleWatch
 
@@ -29,6 +33,7 @@
 #### Frameworks
 
 - SwiftUI
+- WatchOS
 
 
 ---
