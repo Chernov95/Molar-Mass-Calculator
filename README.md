@@ -33,7 +33,8 @@ width="240" height="510">,<img src="https://user-images.githubusercontent.com/45
 #### Frameworks
 
 - SwiftUI
-- WatchOS
+- WatchKit
+- Foundation 
 
 
 ---
