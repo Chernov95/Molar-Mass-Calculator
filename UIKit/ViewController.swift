@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ChameleonFramework
 
 
 
@@ -50,7 +49,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         
      
         resultOfCalculation.font = UIFont(name: "Tahoma-Bold", size: 31.2)
-        resultOfCalculation.textColor = UIColor.init(hexString: "4A4A4A")
+        resultOfCalculation.textColor = UIColor(red: 0x4A/255.0, green: 0x4A/255.0, blue: 0x4A/255.0, alpha: 1)
         
 
         tableViewController.allowsSelection = false
@@ -818,7 +817,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
             
             
             let border = UIView(frame: CGRect(x: 18,y: 85,width: self.view.bounds.width - 50 ,height: 1))
-            border.backgroundColor = UIColor.init(hexString: "979797")
+            border.backgroundColor = UIColor(red: 0x97/255.0, green: 0x97/255.0, blue: 0x97/255.0, alpha: 1)
             cell.contentView.addSubview(border)
             
             
@@ -828,23 +827,24 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
             cell.numberOfAtoms.text = String(dictionaryToShowPercantageOfEveryAtom[keysForDictionaryAbove[indexPath.row - 1]]!.numberOfAtoms * Int(bigMultiplyer))
             cell.numberOfAtoms.font = UIFont(name: "LucidaGrande", size: 18.75)
-            cell.numberOfAtoms.textColor = UIColor.init(hexString: "7D8283")
+            cell.numberOfAtoms.textColor = UIColor(red: 0x7D/255.0, green: 0x82/255.0, blue: 0x83/255.0, alpha: 1)
             cell.massInMolecule.text = String(dictionaryToShowPercantageOfEveryAtom[keysForDictionaryAbove[indexPath.row - 1]]!.massOfChemicelElement * bigMultiplyer)
             cell.massInMolecule.font = UIFont(name: "LucidaGrande", size: 18.75)
-            cell.massInMolecule.textColor = UIColor.init(hexString: "7D8283")
+            cell.massInMolecule.textColor = UIColor(red: 0x7D/255.0, green: 0x82/255.0, blue: 0x83/255.0, alpha: 1)
             cell.symbol.text = keysForDictionaryAbove[indexPath.row - 1]
             cell.symbol.font = UIFont(name: "LucidaGrande", size: 18.75)
-            cell.symbol.textColor = UIColor.init(hexString: "7D8283")
+            cell.symbol.textColor = UIColor(red: 0x7D/255.0, green: 0x82/255.0, blue: 0x83/255.0, alpha: 1)
             cell.percent.text = "\(calculatePersentage(generalMass: massOfWholeMoleculeToCalculatePersentage , massOfAtom: dictionaryToShowPercantageOfEveryAtom[keysForDictionaryAbove[indexPath.row - 1]]!.massOfChemicelElement * bigMultiplyer).rounded(toPlaces: 2))"
             cell.percent.font = UIFont(name: "LucidaGrande", size: 18.75)
-            cell.percent.textColor = UIColor.init(hexString: "7D8283")
+            cell.percent.textColor = UIColor(red: 0x7D/255.0, green: 0x82/255.0, blue: 0x83/255.0, alpha: 1)
             
             if indexPath.row == 1 {
-                cell.percent.textColor = UIColor.init(hexString: "DD0C25")
+                cell.percent.textColor = UIColor(red: 0xDD/255.0, green: 0x0C/255.0, blue: 0x25/255.0, alpha: 1)
             }else if indexPath.last == dictionaryToShowPercantageOfEveryAtom.count{
-                cell.percent.textColor = UIColor.init(hexString: "76D014")
+                cell.percent.textColor = UIColor(red: 0x76/255.0, green: 0xD0/255.0, blue: 0x14/255.0, alpha: 1)
             }else{
-                cell.percent.textColor = UIColor.init(randomFlatColorExcludingColorsIn: [FlatRed() , FlatGreen() , UIColor.init(hexString: "DD0C25")! , UIColor.init(hexString: "76D014")! ])            }
+                cell.percent.textColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
+            }
             
             return cell
         }
