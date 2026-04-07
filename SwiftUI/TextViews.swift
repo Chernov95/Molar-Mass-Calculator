@@ -71,7 +71,6 @@ struct DataLabel : View {
     var body: some View {
         Text(text)
             .foregroundColor(color ?? Color("DetailsLabelTextViewColor"))
-            .foregroundColor(.red)
             .font(Font.custom("LucidaGrande", size: 17, relativeTo: .body))
             .multilineTextAlignment(.center)
             .lineLimit(1)
